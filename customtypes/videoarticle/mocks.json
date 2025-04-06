@@ -1,0 +1,235 @@
+[
+    {
+      "uid": {
+        "__TYPE__": "UIDContent",
+        "value": "pastel-chocolate-facil-esponjoso"
+      },
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Pastel de Chocolate Fácil y Esponjoso",
+              "spans": []
+            }
+          }
+        ]
+      },
+      "publication_date": {
+        "__TYPE__": "FieldContent",
+        "type": "Date",
+        "value": "2023-10-26"
+      },
+      "featured_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.prismic.io/your-repo-name/imagen_placeholder_pastel.jpg?auto=compress,format",
+          "width": 1280,
+          "height": 720
+        },
+        "url": "https://images.prismic.io/your-repo-name/imagen_placeholder_pastel.jpg?auto=compress,format&rect=0,0,1280,720&w=1280&h=720",
+        "width": 1280,
+        "height": 720,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {},
+        "alt": "Pastel de chocolate esponjoso recién horneado"
+      },
+      "video_embed": {
+        "__TYPE__": "Embed",
+        "value": {
+          "provider_name": "YouTube",
+          "provider_url": "https://www.youtube.com/",
+          "title": "PASTEL DE CHOCOLATE ¡El MÁS FÁCIL del MUNDO! 😍🍫 | SIN BATIDORA | Quiero Cupcakes",
+          "author_name": "Quiero Cupcakes",
+          "author_url": "https://www.youtube.com/@QuieroCupcakes",
+          "type": "video",
+          "height": 270,
+          "width": 480,
+          "version": "1.0",
+          "thumbnail_url": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+          "thumbnail_width": 480,
+          "thumbnail_height": 360,
+          "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"PASTEL DE CHOCOLATE ¡El MÁS FÁCIL del MUNDO! 😍🍫 | SIN BATIDORA | Quiero Cupcakes\"></iframe>",
+          "embed_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+      },
+      "short_description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Descubre cómo hacer el pastel de chocolate más fácil y delicioso que hayas probado. Perfecto para principiantes y amantes del chocolate.",
+              "spans": []
+            }
+          }
+        ]
+      },
+      "ingredients": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": { "text": "Para el bizcocho:", "spans": [ { "start": 0, "end": 17, "type": "strong" } ] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "200g Harina de trigo", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "50g Cacao en polvo sin azúcar", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "250g Azúcar", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "1 cucharadita Bicarbonato sódico", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "1/2 cucharadita Levadura química (polvo de hornear)", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "1 pizca Sal", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "2 Huevos L", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "120ml Aceite vegetal suave", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "240ml Leche", "spans": [] }
+          },
+          {
+            "type": "list-item",
+            "content": { "text": "1 cucharadita Extracto de vainilla", "spans": [] }
+          }
+        ]
+      },
+      "instructions": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": { "text": "Preparación:", "spans": [ { "start": 0, "end": 11, "type": "strong" } ] }
+          },
+          {
+            "type": "o-list-item",
+            "content": { "text": "Precalienta el horno a 180°C (350°F) y engrasa y enharina un molde redondo de 20cm.", "spans": [] }
+          },
+          {
+            "type": "o-list-item",
+            "content": { "text": "En un bol grande, tamiza y mezcla la harina, el cacao, el azúcar, el bicarbonato, la levadura y la sal.", "spans": [] }
+          },
+          {
+            "type": "o-list-item",
+            "content": { "text": "En otro bol, bate ligeramente los huevos y añade el aceite, la leche y la vainilla. Mezcla bien.", "spans": [] }
+          },
+          {
+            "type": "o-list-item",
+            "content": { "text": "Vierte los ingredientes líquidos sobre los secos y mezcla con una espátula o varillas justo hasta que se integren. No sobrebatas.", "spans": [] }
+          },
+          {
+            "type": "o-list-item",
+            "content": { "text": "Vierte la masa en el molde preparado.", "spans": [] }
+          },
+          {
+            "type": "o-list-item",
+            "content": { "text": "Hornea durante 30-35 minutos, o hasta que al insertar un palillo en el centro, éste salga limpio.", "spans": [] }
+          },
+          {
+            "type": "o-list-item",
+            "content": { "text": "Deja enfriar en el molde unos 10 minutos antes de desmoldar sobre una rejilla para que enfríe completamente.", "spans": [] }
+          }
+        ]
+      },
+      "prep_time": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "15 minutos"
+      },
+      "cook_time": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "35 minutos"
+      },
+      "servings": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "8-10 porciones"
+      },
+      "difficulty": {
+        "__TYPE__": "FieldContent",
+        "type": "Select",
+        "value": "Fácil"
+      },
+      "category": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "DocumentLink",
+          "id": "YaxYsRIAACsAwkvM",
+          "type": "category",
+          "tags": [],
+          "lang": "es-es",
+          "uid": "postres",
+          "slug": "postres",
+          "link_type": "Document",
+          "isBroken": false
+        }
+      },
+      "youtube_video_id": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "dQw4w9WgXcQ"
+      },
+      "meta_title": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Receta Pastel de Chocolate Fácil | Hornea con Vicky"
+      },
+      "meta_description": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Aprende a preparar un delicioso y esponjoso pastel de chocolate fácilmente. Receta paso a paso perfecta para cualquier ocasión."
+      },
+      "social_card_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "social",
+          "url": "https://images.prismic.io/your-repo-name/imagen_placeholder_social_pastel.jpg?auto=compress,format",
+          "width": 1200,
+          "height": 630
+        },
+        "url": "https://images.prismic.io/your-repo-name/imagen_placeholder_social_pastel.jpg?auto=compress,format&rect=0,0,1200,630&w=1200&h=630",
+        "width": 1200,
+        "height": 630,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {},
+        "alt": "Cómo hacer pastel de chocolate fácil - Receta"
+      }
+    }
+  ]

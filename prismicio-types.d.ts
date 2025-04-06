@@ -56,8 +56,7 @@ interface ArticleDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<ArticleDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<ArticleDocumentDataSlicesSlice> /**
    * Meta Title field in *Article*
    *
    * - **Field Type**: Text
@@ -129,7 +128,7 @@ export interface NavigationDocumentDataLinksItem {
    * - **API ID Path**: navigation.links[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link: prismic.LinkField;
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -205,8 +204,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
    * Meta Title field in *Page*
    *
    * - **Field Type**: Text
@@ -365,25 +363,25 @@ export type ContactFormSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Image → Primary*
+ * Primary content in *Image → Default → Primary*
  */
 export interface ImageSliceDefaultPrimary {
   /**
-   * Image field in *Image → Primary*
+   * Image field in *Image → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: image.primary.image
+   * - **API ID Path**: image.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * Caption field in *Image → Primary*
+   * Caption field in *Image → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: Optional - Caption under the image
-   * - **API ID Path**: image.primary.caption
+   * - **API ID Path**: image.default.primary.caption
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   caption: prismic.RichTextField;
@@ -403,25 +401,25 @@ export type ImageSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Image → Primary*
+ * Primary content in *Image → Wide → Primary*
  */
 export interface ImageSliceWidePrimary {
   /**
-   * Image field in *Image → Primary*
+   * Image field in *Image → Wide → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: image.primary.image
+   * - **API ID Path**: image.wide.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * Caption field in *Image → Primary*
+   * Caption field in *Image → Wide → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: Optional - Caption under the image
-   * - **API ID Path**: image.primary.caption
+   * - **API ID Path**: image.wide.primary.caption
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   caption: prismic.RichTextField;
@@ -455,25 +453,25 @@ type ImageSliceVariation = ImageSliceDefault | ImageSliceWide;
 export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
 
 /**
- * Primary content in *Quote → Primary*
+ * Primary content in *Quote → Default → Primary*
  */
 export interface QuoteSliceDefaultPrimary {
   /**
-   * Quote field in *Quote → Primary*
+   * Quote field in *Quote → Default → Primary*
    *
    * - **Field Type**: Title
    * - **Placeholder**: Quote without quotation marks
-   * - **API ID Path**: quote.primary.quote
+   * - **API ID Path**: quote.default.primary.quote
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   quote: prismic.TitleField;
 
   /**
-   * Source field in *Quote → Primary*
+   * Source field in *Quote → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: Source of the quote
-   * - **API ID Path**: quote.primary.source
+   * - **API ID Path**: quote.default.primary.source
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   source: prismic.KeyTextField;
@@ -507,15 +505,15 @@ type QuoteSliceVariation = QuoteSliceDefault;
 export type QuoteSlice = prismic.SharedSlice<"quote", QuoteSliceVariation>;
 
 /**
- * Primary content in *Text → Primary*
+ * Primary content in *Text → Default → Primary*
  */
 export interface TextSliceDefaultPrimary {
   /**
-   * Text field in *Text → Primary*
+   * Text field in *Text → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: Text with rich formatting
-   * - **API ID Path**: text.primary.text
+   * - **API ID Path**: text.default.primary.text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
@@ -556,14 +554,28 @@ declare module "@prismicio/client" {
     ): prismic.Client<AllDocumentTypes>;
   }
 
+  interface CreateWriteClient {
+    (
+      repositoryNameOrEndpoint: string,
+      options: prismic.WriteClientConfig,
+    ): prismic.WriteClient<AllDocumentTypes>;
+  }
+
+  interface CreateMigration {
+    (): prismic.Migration<AllDocumentTypes>;
+  }
+
   namespace Content {
     export type {
       ArticleDocument,
       ArticleDocumentData,
+      ArticleDocumentDataSlicesSlice,
       NavigationDocument,
       NavigationDocumentData,
+      NavigationDocumentDataLinksItem,
       PageDocument,
       PageDocumentData,
+      PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
@@ -571,13 +583,17 @@ declare module "@prismicio/client" {
       ContactFormSliceVariation,
       ContactFormSliceDefault,
       ImageSlice,
+      ImageSliceDefaultPrimary,
+      ImageSliceWidePrimary,
       ImageSliceVariation,
       ImageSliceDefault,
       ImageSliceWide,
       QuoteSlice,
+      QuoteSliceDefaultPrimary,
       QuoteSliceVariation,
       QuoteSliceDefault,
       TextSlice,
+      TextSliceDefaultPrimary,
       TextSliceVariation,
       TextSliceDefault,
     };

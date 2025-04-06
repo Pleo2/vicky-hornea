@@ -1,0 +1,156 @@
+{
+    "id": "videoarticle",
+    "label": "videoarticle",
+    "repeatable": true,
+    "status": true,
+    "json": {
+      "Main": {
+        "uid": {
+          "type": "UID",
+          "config": {
+            "label": "UID (Identificador URL)",
+            "placeholder": "ej: pastel-zanahoria-esponjoso"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Título de la Receta",
+            "placeholder": "Ej: Pastel de Zanahoria Esponjoso"
+          }
+        },
+        "publication_date": {
+          "type": "Date",
+          "config": {
+            "label": "Fecha de Publicación",
+            "placeholder": "Usar fecha del video si aplica"
+          }
+        },
+        "featured_image": {
+          "type": "Image",
+          "config": {
+            "constraint": {
+              "width": 1280,
+              "height": 720
+            },
+            "thumbnails": [],
+            "label": "Imagen Principal (Miniatura Video)"
+          }
+        },
+        "video_embed": {
+          "type": "Embed",
+          "config": {
+            "label": "Video de YouTube (Embed)",
+            "placeholder": "Pega la URL del video de YouTube aquí..."
+          }
+        },
+        "short_description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em",
+            "allowTargetBlank": true,
+            "label": "Descripción Corta",
+            "placeholder": "Un resumen atractivo de la receta (1-2 frases)..."
+          }
+        },
+        "ingredients": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,list-item,o-list-item",
+            "allowTargetBlank": true,
+            "label": "Ingredientes",
+            "placeholder": "Lista de ingredientes, preferiblemente usando viñetas (* o -)..."
+          }
+        },
+        "instructions": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,list-item,o-list-item",
+            "allowTargetBlank": true,
+            "label": "Instrucciones / Pasos",
+            "placeholder": "Pasos de la preparación, preferiblemente usando listas numeradas (1., 2.)..."
+          }
+        },
+        "prep_time": {
+          "type": "Text",
+          "config": {
+            "label": "Tiempo de Preparación",
+            "placeholder": "Ej: 20 minutos"
+          }
+        },
+        "cook_time": {
+          "type": "Text",
+          "config": {
+            "label": "Tiempo de Horneado/Cocción",
+            "placeholder": "Ej: 45 minutos"
+          }
+        },
+        "servings": {
+          "type": "Text",
+          "config": {
+            "label": "Porciones / Rendimiento",
+            "placeholder": "Ej: 8 porciones"
+          }
+        },
+        "difficulty": {
+          "type": "Select",
+          "config": {
+            "options": [
+              "Fácil",
+              "Intermedio",
+              "Difícil"
+            ],
+            "default_value": "Fácil",
+            "label": "Dificultad",
+            "placeholder": "Selecciona el nivel..."
+          }
+        },
+        "category": {
+          "type": "Link",
+          "config": {
+            "select": "document",
+            "customtypes": [
+              "category"
+            ],
+            "label": "Categoría",
+            "placeholder": "Selecciona una categoría..."
+          }
+        },
+        "youtube_video_id": {
+          "type": "Text",
+          "config": {
+            "label": "ID del Video de YouTube (para automatización)",
+            "placeholder": "Ej: dQw4w9WgXcQ (No editar manualmente)"
+          }
+        }
+      },
+      "SEO & Metadata": {
+        "meta_title": {
+          "type": "Text",
+          "config": {
+            "label": "Meta Título (SEO)",
+            "placeholder": "Título para buscadores y pestañas del navegador (máx. 60 caracteres)"
+          }
+        },
+        "meta_description": {
+          "type": "Text",
+          "config": {
+            "label": "Meta Descripción (SEO)",
+            "placeholder": "Descripción concisa para buscadores (máx. 160 caracteres)"
+          }
+        },
+        "social_card_image": {
+          "type": "Image",
+          "config": {
+            "constraint": {
+              "width": 1200,
+              "height": 630
+            },
+            "thumbnails": [],
+            "label": "Imagen para Redes Sociales (Opcional, 1200x630px)"
+          }
+        }
+      }
+    }
+  }
