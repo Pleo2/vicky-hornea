@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@prismicio/client": "^7.17.1",
+    "@prismicio/migrate": "^0.0.2",
     "@prismicio/next": "^2.0.1",
     "@prismicio/react": "^3.2.0",
     "axios": "^1.8.4",

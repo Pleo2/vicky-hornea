@@ -22,6 +22,10 @@ const routes = [
     type: "page",
     path: "/:uid",
   },
+  {
+    type: "videoarticle",
+    path: "/videoarticles/:uid"
+  }
 ];
 
 /**
