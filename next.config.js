@@ -1,14 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  async rewrites() {
-    return [
-      {
-        source: "/articles",
-        destination: "/",
-      },
-    ];
-  },
+    experimental: {
+        viewTransition: true
+    },
+    reactStrictMode: true,
+    async rewrites() {
+        return [
+            {
+                source: "/articles",
+                destination: "/"
+            }
+        ];
+    }
 };
 
 module.exports = nextConfig;
